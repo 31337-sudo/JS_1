@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
     <script>
+        //Задание 1
+        document.write("Простые числа от 0 до 100: ");
+        var num = 2;
+        while (num <= 100) {
+            if (theNum(num)) {
+                document.write(num + " ");
+            }
+            num++;
+        }
+
+        function theNum(num) {
+            var i = 2;
+            while (i < num / 2) {
+                if (num % i == 0) {
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
+        
+        //Задание 2
+        var basket = [
+            {
+                title: "Товар 1",
+                price: 500,
+                count: 5
+            },
+            {
+                title: "Товар 2",
+                price: 600,
+                count: 6
+            },
+            {
+                title: "Товар 3",
+                price: 700,
+                count: 7
+            }
+        ]
+        
+        function countBasket (mas) {
+            var allBasket = 0;
+            for (var item of mas) {
+                allBasket = allBasket + (item.price * item.count)
+            }
+            return allBasket;
+        }
+        
+        console.log(countBasket(basket))
+        
+        //Задание 4
+        for (var i = 0; i <= 9; console.log(i++));
+        
+        //Задание 5
+        for (var i = 1, line = "x"; i <= 20; console.log(line), i++, line += "x");
         
     </script>
 </body>
+
 </html>
